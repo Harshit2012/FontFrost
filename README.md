@@ -4,6 +4,7 @@
 
 # FontFrost🔠
 Preview and copy font code easily.
+
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Harshit2012/FontFrost?tab=MIT-1-ov-file#readme)
 ![GitHub Release](https://img.shields.io/github/v/release/harshit2012/FontFrost)
 ![Forks](https://img.shields.io/github/forks/harshit2012/FontFrost)
