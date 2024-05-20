@@ -1,0 +1,27 @@
+body {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand {
+    color: #ff6666 !important;
+}
+
+.btn-danger {
+    background-color: #ff6666;
+    border-color: #ff6666;
+}
+
+.preview-container {
+    margin-top: 20px;
+}
+
+#preview {
+    font-size: 1.5rem;
+}
+
+#fontCode {
+    display: none;
+    margin-top: 20px;
+}
