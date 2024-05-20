@@ -23,7 +23,7 @@ Preview and copy font code easily.
 - Linear background - WebGradients website
 
 ## Want to add fonts in website?
-To add font, you have to write option in dropdown. Example:-
+To add font, you have to write option in dropdown in `font.html` file. Example:-
 ```html
  <option value="font">Font</option>
 ```
