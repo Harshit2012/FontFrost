@@ -1,44 +1,48 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const fontNameSelect = document.getElementById('fontName');
-    const exampleTextInput = document.getElementById('exampleText');
-    const fontSizeSlider = document.getElementById('fontSize');
+document.addEventListener('DOMContentLoaded', function () {
+    const fontName = document.getElementById('fontName');
+    const fontSearch = document.getElementById('fontSearch');
+    const exampleText = document.getElementById('exampleText');
+    const fontSize = document.getElementById('fontSize');
     const fontSizeValue = document.getElementById('fontSizeValue');
-    const fontWeightSlider = document.getElementById('fontWeight');
+    const fontWeight = document.getElementById('fontWeight');
     const fontWeightValue = document.getElementById('fontWeightValue');
-    const previewDiv = document.getElementById('preview');
-    const copyButton = document.getElementById('copyButton');
-    const fontCodeTextarea = document.getElementById('fontCode');
+    const preview = document.getElementById('preview');
+    const copyBtn = document.getElementById('copyBtn');
 
     function updatePreview() {
-        const fontName = fontNameSelect.value;
-        const exampleText = exampleTextInput.value || "This is a preview text.";
-        const fontSize = fontSizeSlider.value;
-        const fontWeight = fontWeightSlider.value;
-
-        previewDiv.style.fontFamily = fontName;
-        previewDiv.style.fontSize = fontSize + 'px';
-        previewDiv.style.fontWeight = fontWeight;
-        previewDiv.textContent = exampleText;
-
-        fontCodeTextarea.value = `font-family: ${fontName}; font-size: ${fontSize}px; font-weight: ${fontWeight};`;
+        preview.style.fontFamily = fontName.value;
+        preview.style.fontSize = fontSize.value + 'px';
+        preview.style.fontWeight = fontWeight.value;
+        preview.textContent = exampleText.value || 'This is a preview text.';
+        fontSizeValue.textContent = fontSize.value;
+        fontWeightValue.textContent = fontWeight.value;
     }
 
-    fontNameSelect.addEventListener('change', updatePreview);
-    exampleTextInput.addEventListener('input', updatePreview);
-    fontSizeSlider.addEventListener('input', function() {
-        fontSizeValue.textContent = fontSizeSlider.value;
-        updatePreview();
-    });
-    fontWeightSlider.addEventListener('input', function() {
-        fontWeightValue.textContent = fontWeightSlider.value;
-        updatePreview();
+    function filterFonts() {
+        const filter = fontSearch.value.toLowerCase();
+        for (let option of fontName.options) {
+            const text = option.text.toLowerCase();
+            option.style.display = text.includes(filter) ? '' : 'none';
+        }
+    }
+
+    fontSearch.addEventListener('input', filterFonts);
+    fontName.addEventListener('change', updatePreview);
+    exampleText.addEventListener('input', updatePreview);
+    fontSize.addEventListener('input', updatePreview);
+    fontWeight.addEventListener('input', updatePreview);
+
+    copyBtn.addEventListener('click', function () {
+        const cssCode = `font-family: ${fontName.value}; font-size: ${fontSize.value}px; font-weight: ${fontWeight.value};`;
+        navigator.clipboard.writeText(cssCode).then(function () {
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = 'Copy CSS';
+            }, 2000);
+        }, function (err) {
+            console.error('Could not copy text: ', err);
+        });
     });
 
-    copyButton.addEventListener('click', function() {
-        fontCodeTextarea.style.display = 'block';
-        fontCodeTextarea.select();
-        document.execCommand('copy');
-        alert('Font code copied to clipboard!');
-    });
     updatePreview();
 });
