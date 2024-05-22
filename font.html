@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FontFrost</title>
+    <title>FontFrost - v1.0.3</title>
     <link rel="icon" href="logo.jpg">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">FontFrost - v1.0.2</a>
+        <a class="navbar-brand" href="index.html">FontFrost - v1.0.3</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,19 +21,23 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Font Preview</a>
+                    <a class="nav-link" href="#">Fonts</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container mt-5">
-        <h2 class="text-center">FontFrost</h2>
+        <h2 class="text-center">FontFrost - v1.0.3</h2>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
+                        <label for="fontSearch">Search Font Family</label>
+                        <input type="text" class="form-control" id="fontSearch" placeholder="Start typing to search fonts...">
+                    </div>
+                    <div class="form-group">
                         <label for="fontName">Select Font Family</label>
-                        <select class="form-control" id="fontName">
+                        <select class="form-control" id="fontName" size="10">
                             <option value="Arial">Arial</option>
                             <option value="Verdana">Verdana</option>
                             <option value="Helvetica">Helvetica</option>
@@ -42,126 +46,78 @@
                             <option value="Georgia">Georgia</option>
                             <option value="Palatino">Palatino</option>
                             <option value="Garamond">Garamond</option>
+                            <option value="Bookman">Bookman</option>
                             <option value="Comic Sans MS">Comic Sans MS</option>
                             <option value="Trebuchet MS">Trebuchet MS</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="Impact">Impact</option>
+                            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
                             <option value="Tahoma">Tahoma</option>
                             <option value="Geneva">Geneva</option>
-                            <option value="Calibri">Calibri</option>
-                            <option value="Candara">Candara</option>
-                            <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
-                            <option value="Gill Sans">Gill Sans</option>
-                            <option value="Lucida Sans">Lucida Sans</option>
-                            <option value="Montserrat">Montserrat</option>
-                            <option value="Verdana">Verdana</option>
+                            <option value="Sans-serif">Sans-serif</option>
+                            <option value="Serif">Serif</option>
+                            <option value="Monospace">Monospace</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Cursive">Cursive</option>
+                            <option value="Century Gothic">Century Gothic</option>
+                            <option value="Lobster">Lobster</option>
+                            <option value="Pacifico">Pacifico</option>
+                            <option value="Dancing Script">Dancing Script</option>
+                            <option value="Bangers">Bangers</option>
+                            <option value="Anton">Anton</option>
+                            <option value="Abril Fatface">Abril Fatface</option>
+                            <option value="Playfair Display">Playfair Display</option>
+                            <option value="Fjalla One">Fjalla One</option>
+                            <option value="Merriweather">Merriweather</option>
                             <option value="Open Sans">Open Sans</option>
                             <option value="Roboto">Roboto</option>
                             <option value="Lato">Lato</option>
                             <option value="Oswald">Oswald</option>
                             <option value="Raleway">Raleway</option>
-                            <option value="PT Sans">PT Sans</option>
-                            <option value="Source Sans Pro">Source Sans Pro</option>
-                            <option value="Merriweather">Merriweather</option>
-                            <option value="Ubuntu">Ubuntu</option>
-                            <option value="Playfair Display">Playfair Display</option>
-                            <option value="Noto Sans">Noto Sans</option>
+                            <option value="Slabo 27px">Slabo 27px</option>
+                            <option value="Lora">Lora</option>
+                            <option value="Indie Flower">Indie Flower</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Amatic SC">Amatic SC</option>
+                            <option value="Shadows Into Light">Shadows Into Light</option>
+                            <option value="Mukta">Mukta</option>
+                            <option value="PT Serif">PT Serif</option>
                             <option value="Quicksand">Quicksand</option>
-                            <option value="Fira Sans">Fira Sans</option>
-                            <option value="Inconsolata">Inconsolata</option>
-                            <option value="Droid Sans">Droid Sans</option>
-                            <option value="Arvo">Arvo</option>
+                            <option value="Bitter">Bitter</option>
                             <option value="Poppins">Poppins</option>
-                            <option value="Oxygen">Oxygen</option>
-                            <option value="Titillium Web">Titillium Web</option>
+                            <option value="Inconsolata">Inconsolata</option>
+                            <option value="Hind">Hind</option>
+                            <option value="Karla">Karla</option>
+                            <option value="Rubik">Rubik</option>
+                            <option value="Work Sans">Work Sans</option>
+                            <option value="Arvo">Arvo</option>
+                            <option value="Fira Sans">Fira Sans</option>
+                            <option value="Noto Sans">Noto Sans</option>
                             <option value="Cabin">Cabin</option>
                             <option value="Muli">Muli</option>
-                            <option value="Lora">Lora</option>
-                            <option value="Anton">Anton</option>
-                            <option value="Indie Flower">Indie Flower</option>
-                            <option value="Bebas Neue">Bebas Neue</option>
-                            <option value="Dosis">Dosis</option>
-                            <option value="Rubik">Rubik</option>
-                            <option value="Mukta">Mukta</option>
-                            <option value="Alegreya">Alegreya</option>
-                            <option value="Varela Round">Varela Round</option>
-                            <option value="Bitter">Bitter</option>
-                            <option value="Maven Pro">Maven Pro</option>
-                            <option value="Abel">Abel</option>
-                            <option value="Exo">Exo</option>
-                            <option value="Kanit">Kanit</option>
-                            <option value="Hind">Hind</option>
-                            <option value="Jaldi">Jaldi</option>
-                            <option value="Karla">Karla</option>
-                            <option value="Bree Serif">Bree Serif</option>
-                            <option value="Cairo">Cairo</option>
-                            <option value="Comfortaa">Comfortaa</option>
-                            <option value="Cuprum">Cuprum</option>
-                            <option value="Fjalla One">Fjalla One</option>
-                            <option value="Julius Sans One">Julius Sans One</option>
-                            <option value="Libre Baskerville">Libre Baskerville</option>
-                            <option value="Mukta Vaani">Mukta Vaani</option>
-                            <option value="Neuton">Neuton</option>
-                            <option value="Patua One">Patua One</option>
-                            <option value="Rakkas">Rakkas</option>
+                            <option value="Rokkitt">Rokkitt</option>
                             <option value="Saira">Saira</option>
-                            <option value="Shadows Into Light">Shadows Into Light</option>
-                            <option value="Signika">Signika</option>
-                            <option value="Slabo 27px">Slabo 27px</option>
-                            <option value="Spartan">Spartan</option>
-                            <option value="Tajawal">Tajawal</option>
-                            <option value="Varela">Varela</option>
-                            <option value="Work Sans">Work Sans</option>
+                            <option value="Crete Round">Crete Round</option>
+                            <option value="Tinos">Tinos</option>
+                            <option value="Karma">Karma</option>
+                            <option value="Overpass">Overpass</option>
+                            <option value="Nunito">Nunito</option>
                             <option value="Zilla Slab">Zilla Slab</option>
-                            <option value="Abril Fatface">Abril Fatface</option>
-                            <option value="Acme">Acme</option>
-                            <option value="Aleo">Aleo</option>
-                            <option value="Anonymous Pro">Anonymous Pro</option>
-                            <option value="Archivo">Archivo</option>
-                            <option value="Assistant">Assistant</option>
-                            <option value="Bai Jamjuree">Bai Jamjuree</option>
-                            <option value="Baloo 2">Baloo 2</option>
+                            <option value="Varela Round">Varela Round</option>
                             <option value="Barlow">Barlow</option>
-                            <option value="Bitter">Bitter</option>
-                            <option value="Carter One">Carter One</option>
-                            <option value="Catamaran">Catamaran</option>
-                            <option value="Chivo">Chivo</option>
-                            <option value="Crimson Text">Crimson Text</option>
-                            <option value="DM Sans">DM Sans</option>
-                            <option value="El Messiri">El Messiri</option>
-                            <option value="Fira Code">Fira Code</option>
-                            <option value="Francois One">Francois One</option>
-                            <option value="Fredericka the Great">Fredericka the Great</option>
-                            <option value="Glegoo">Glegoo</option>
-                            <option value="Gloria Hallelujah">Gloria Hallelujah</option>
-                            <option value="Heebo">Heebo</option>
-                            <option value="IBM Plex Sans">IBM Plex Sans</option>
-                            <option value="Istok Web">Istok Web</option>
-                            <option value="Josefin Sans">Josefin Sans</option>
-                            <option value="Kalam">Kalam</option>
-                            <option value="Kurale">Kurale</option>
-                            <option value="Lemonada">Lemonada</option>
-                            <option value="Lobster">Lobster</option>
-                            <option value="Manjari">Manjari</option>
                             <option value="Merriweather Sans">Merriweather Sans</option>
-                            <option value="Nanum Gothic">Nanum Gothic</option>
-                            <option value="Noto Serif">Noto Serif</option>
-                            <option value="PT Serif">PT Serif</option>
-                            <option value="Pacifico">Pacifico</option>
-                            <option value="Quattrocento Sans">Quattrocento Sans</option>
-                            <option value="Quicksand">Quicksand</option>
-                            <option value="Rajdhani">Rajdhani</option>
-                            <option value="Red Hat Display">Red Hat Display</option>
-                            <option value="Righteous">Righteous</option>
-                            <option value="Roboto Mono">Roboto Mono</option>
-                            <option value="Rubik Mono One">Rubik Mono One</option>
-                            <option value="Sacramento">Sacramento</option>
-                            <option value="Sarabun">Sarabun</option>
-                            <option value="Satisfy">Satisfy</option>
-                            <option value="Secular One">Secular One</option>
-                            <option value="Sriracha">Sriracha</option>
-                            <option value="Syne">Syne</option>
+                            <option value="Archivo">Archivo</option>
+                            <option value="Cardo">Cardo</option>
+                            <option value="Alegreya">Alegreya</option>
+                            <option value="Libre Baskerville">Libre Baskerville</option>
+                            <option value="Exo 2">Exo 2</option>
+                            <option value="Rufina">Rufina</option>
+                            <option value="Merriweather">Merriweather</option>
+                            <option value="Yanone Kaffeesatz">Yanone Kaffeesatz</option>
+                            <option value="Old Standard TT">Old Standard TT</option>
+                            <option value="Josefin Sans">Josefin Sans</option>
                             <option value="Vollkorn">Vollkorn</option>
+                            <option value="Merriweather">Merriweather</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -174,21 +130,19 @@
                     </div>
                     <div class="form-group">
                         <label for="fontWeight">Font Weight: <span id="fontWeightValue">400</span></label>
-                        <input type="range" class="form-control-range" id="fontWeight" min="100" max="900" step="100"
-                            value="400">
+                        <input type="range" class="form-control-range" id="fontWeight" min="100" max="900" step="100" value="400">
                     </div>
                 </form>
-                <div class="preview-container mt-3">
-                    <h4>Preview:</h4>
-                    <div id="preview" class="border p-3" style="font-size: 16px; font-weight: 400;">This is a preview
-                        text.</div>
+                <div class="preview mt-4 p-3 border" id="preview" style="font-family: Arial; font-size: 16px; font-weight: 400;">
+                    This is a preview text.
                 </div>
-                <button class="btn btn-danger btn-block mt-3" id="copyButton">Copy Code</button>
-                <textarea id="fontCode" class="form-control mt-3" readonly></textarea>
+                <button class="btn btn-primary mt-3" id="copyBtn">Copy CSS</button>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 </body>
-</html
+</html>
