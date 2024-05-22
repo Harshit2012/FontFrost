@@ -11,6 +11,7 @@ Preview and copy font code easily.
 ![Stars](https://img.shields.io/github/stars/harshit2012/FontFrost)
 
 ## Features✨
+- Search input to search fonts
 - 100 fonts, more will be added later
 - Easy to use
 - Responsive design
